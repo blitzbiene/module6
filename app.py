@@ -101,3 +101,6 @@ def delete_member(member_id):
     db.execute("delete from members where id=?",[member_id])
     db.commit()
     return jsonify({'message':'deleted member {}'.format(member_id)})
+
+if __name__ == '__main__':
+    app.run(debug=True)
